@@ -1,1 +1,1 @@
-# My docker base images and some is using mirrors in China.
+# My docker base images and some are using mirrors in China.
