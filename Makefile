@@ -1,6 +1,10 @@
 ubuntu: check
 	docker build --rm -t ubuntu/latest ubuntu
 
+alpine: check
+	docker build --rm -t my/alpine alpine
+
+
 java: ubuntu
 	docker build --rm -t ubuntu/java ubuntu/java
 
