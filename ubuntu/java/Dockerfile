@@ -1,4 +1,4 @@
-FROM ubuntu/latest
+FROM my/ubuntu
 
 MAINTAINER James Chan <szjameschan@gmail.com>
 
@@ -13,7 +13,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN apt-get update && apt-get install -y oracle-java8-installer oracle-java8-set-default && \
-    apt-get remove --purge -y `apt-mark showauto` && \
-    apt-get clean && apt-get purge -y && apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /var/cache/oracle-jdk8-installer
+    apt-get clean &&  apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/* 
+#    rm -rf /var/cache/oracle-jdk8-installer
+# apt-get purge -y &&
