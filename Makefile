@@ -10,14 +10,14 @@ git-service: check
 sgit: check
 	docker build --rm -t my/sgit alpine/sgit
 
-git-env: git-dev
+git-env: git
 	docker run --rm -it my/git-dev bash
 
-git-dev: check
-	docker build --rm -t my/git-dev ubuntu/git-dev
+git: check
+	docker build --rm -t my/git/ubuntu git/ubuntu
 
 java: ubuntu
-	docker build --rm -t my/ubuntu/java ubuntu/java
+	docker build --rm -t my/java/ubuntu java/ubuntu
 
 check:
 	@if ! type docker >/dev/null 2>&1; then \

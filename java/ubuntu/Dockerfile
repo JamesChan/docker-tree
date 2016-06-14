@@ -14,6 +14,5 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN apt-get update && apt-get install -y oracle-java8-installer oracle-java8-set-default && \
     apt-get clean &&  apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/* 
-#    rm -rf /var/cache/oracle-jdk8-installer
-# apt-get purge -y &&
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/cache/oracle-jdk8-installer
